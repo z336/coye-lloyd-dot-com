@@ -1,5 +1,8 @@
+import { MdPerson } from 'react-icons/md';
+
 export default {
   name: 'author',
+  icon: MdPerson,
   title: 'Author',
   type: 'document',
   fields: [
@@ -33,7 +36,7 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
+          styles: [{ title: 'Normal', value: 'normal' }],
           lists: [],
         },
       ],
@@ -45,4 +48,4 @@ export default {
       media: 'image',
     },
   },
-}
+};

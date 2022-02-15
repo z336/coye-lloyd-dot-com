@@ -1,9 +1,9 @@
-import { MdOutlineTag } from 'react-icons/md';
+import { MdOutlineLink } from 'react-icons/md';
 
 export default {
-  name: 'category',
-  icon: MdOutlineTag,
-  title: 'Category',
+  name: 'work',
+  icon: MdOutlineLink,
+  title: 'Work',
   type: 'document',
   fields: [
     {
@@ -12,9 +12,14 @@ export default {
       type: 'string',
     },
     {
+      name: 'url',
+      title: 'URL',
+      type: 'url',
+    },
+    {
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'blockContent',
     },
   ],
 };

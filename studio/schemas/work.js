@@ -12,6 +12,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'featured',
+      title: 'Is this the featured work?',
+      type: 'boolean',
+    },
+    {
       name: 'url',
       title: 'URL',
       type: 'url',

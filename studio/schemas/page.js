@@ -12,6 +12,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'image',
+      title: 'Main Image',
+      type: 'mainImage',
+      options: { hotspot: true },
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

@@ -1,0 +1,89 @@
+@use './reset';
+@use './settings';
+@use './typography';
+@use './cube';
+
+body {
+  color: var(--black);
+  background-color: var(--light);
+  font-family: Open;
+  font-size: var(--step-0);
+  line-height: 1.7;
+  overflow-y: scroll;
+}
+
+header {
+  grid-area: header;
+  padding-top: var(--vertical-space);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+main {
+  grid-area: main;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+footer {
+  grid-area: footer;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+p,
+ol,
+ul,
+blockquote {
+  max-width: var(--measure);
+}
+
+a {
+  color: currentColor;
+  text-decoration: 2px solid underline;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-underline-offset: 0.25rem;
+  }
+}
+
+a:focus,
+button:focus {
+  z-index: 10;
+  outline: 9px double currentColor;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+blockquote {
+  border-left: 9px solid currentColor;
+  padding-left: var(--gutter);
+  font-style: italic;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--light);
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+  width: 0.65rem;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--black) var(--light);
+}
+body::-webkit-scrollbar-track {
+  background: var(--light);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 6px;
+  border: 3px solid var(--light);
+}

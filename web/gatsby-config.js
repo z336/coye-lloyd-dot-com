@@ -1,34 +1,52 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Coye Lloyd`,
+    siteUrl: `https://coyelloyd.com`,
+    description: `Coye Lloyd's personal site`,
   },
   plugins: [
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: `gatsby-source-sanity`,
       options: {
-        projectId: 'mjtlcb9d',
-        dataset: 'production',
+        projectId: `mjtlcb9d`,
+        dataset: `production`,
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-image',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: 'src/images/icon.png',
+        icon: `src/assets/images/icon.png`,
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: `images`,
+        path: `./src/assets/images/`,
       },
-      __key: 'images',
+      __key: `images`,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `./src/pages/`,
+      },
+      __key: `pages`,
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
     },
   ],
 };

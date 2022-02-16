@@ -1,0 +1,26 @@
+.navigation {
+  a {
+    text-decoration: none;
+    background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+      2px no-repeat;
+    transition: 0.1s, background-position 0s 0.1s;
+    :hover {
+      --d: 100%;
+      --p: 100%;
+    }
+    &.active {
+      background: linear-gradient(currentColor 0 0) 100% 100% / 100% 2px
+        no-repeat;
+    }
+  }
+  svg {
+    max-width: 20rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+}

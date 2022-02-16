@@ -10,6 +10,8 @@ export default {
       name: 'caption',
       type: 'string',
       title: 'Caption',
+      description:
+        'Photo credit on pages, movie title or description of the image in posts.',
       options: {
         isHighlighted: true,
       },

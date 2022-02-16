@@ -43,7 +43,7 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
+            title: 'External link',
             name: 'link',
             type: 'object',
             fields: [
@@ -59,6 +59,23 @@ export default {
               },
             ],
           },
+          {
+            name: 'internalLink',
+            type: 'object',
+            title: 'Internal link',
+            fields: [
+              {
+                name: 'reference',
+                type: 'reference',
+                title: 'Reference',
+                to: [
+                  { type: 'post' },
+                  { type: 'page' },
+                  // other types you may want to link to
+                ],
+              },
+            ],
+          },
         ],
       },
     },
@@ -66,10 +83,10 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      name: 'image',
-      title: 'Image',
       type: 'mainImage',
-      options: { hotspot: true },
+    },
+    {
+      type: 'youtube',
     },
   ],
 };

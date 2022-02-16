@@ -3,7 +3,9 @@ import * as React from 'react';
 export default function Footer() {
   return (
     <footer className="border-top">
-      <p>Footer</p>
+      <div className="center">
+        <p>footer</p>
+      </div>
     </footer>
   );
 }

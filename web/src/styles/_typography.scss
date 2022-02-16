@@ -5,29 +5,46 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'OpenLight';
+  src: url('../assets/fonts/OpenSans-Light.ttf');
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Brand';
+  src: url('../assets/fonts/Bellefair-Regular.ttf');
+  font-style: normal;
+  font-display: block;
+}
+
 h1 {
   font-size: var(--step-6);
-  font-family: Open;
+  font-family: OpenLight;
 }
 
 h2 {
   font-size: var(--step-5);
-  font-family: Open;
+  font-family: OpenLight;
 }
 
 h3 {
   font-size: var(--step-4);
-  font-family: Open;
+  font-family: OpenLight;
 }
 
 h4 {
   font-size: var(--step-3);
+  font-family: OpenLight;
 }
 
 h5 {
   font-size: var(--step--2);
+  font-family: OpenLight;
 }
 
 h6 {
   font-size: var(--step--1);
+  font-family: OpenLight;
 }

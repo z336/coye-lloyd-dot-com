@@ -5,11 +5,13 @@ import Icon from '../assets/images/coyelloyd.svg';
 export default function Header() {
   return (
     <header className="grid | navigation | border-bottom">
-      <Link to="/" tabIndex={-1}>
-        <Icon />
-      </Link>
+      <div className="brand | no-focus">
+        <Link to="/" tabIndex={-1}>
+          <Icon />
+        </Link>
+      </div>
       <nav>
-        <ul className="flex">
+        <ul className="flex | primary-navigation">
           <li>
             <Link to="/" activeClassName="active">
               Home

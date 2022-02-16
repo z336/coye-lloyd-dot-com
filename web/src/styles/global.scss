@@ -7,8 +7,7 @@ body {
   color: var(--black);
   background-color: var(--light);
   font-family: Open;
-  font-size: var(--step-0);
-  line-height: 1.7;
+  line-height: 1.69;
   overflow-y: scroll;
 }
 
@@ -21,12 +20,12 @@ header {
 
 main {
   grid-area: main;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
 }
 
 footer {
   grid-area: footer;
+  padding-top: var(--vertical-space);
+  padding-bottom: var(--vertical-space);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
@@ -73,7 +72,7 @@ blockquote {
 
 /* Scrollbar Styles */
 body::-webkit-scrollbar {
-  width: 0.65rem;
+  width: 0.45rem;
 }
 html {
   scrollbar-width: thin;

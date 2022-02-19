@@ -1,7 +1,10 @@
 import * as React from 'react';
+import { Link, graphql } from 'gatsby';
 import HelmetTemplate from '../components/SEO';
 
-export default function Writing() {
+export default function Writing({ data }) {
+  const posts = data.allSanityPost.nodes;
+
   return (
     <>
       <HelmetTemplate title="Writing" />
@@ -10,23 +13,32 @@ export default function Writing() {
           <h1>Writing</h1>
         </div>
         <div className="box | flow">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
-            deleniti eligendi magni, aspernatur fuga reiciendis aliquid sed
-            nobis. Deserunt assumenda natus ullam ea voluptas? Dolor veniam
-            porro perferendis ad enim.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
-            voluptates natus pariatur deleniti beatae. Quo omnis quasi beatae
-            aspernatur minima, eligendi illo consectetur modi? Temporibus ad
-            accusantium repudiandae molestiae nemo. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Iste quidem, aperiam at repellendus
-            accusantium in esse quas consectetur totam voluptatem, minima
-            laborum unde facere a iure tempora eaque assumenda? Odio.
-          </p>
+          <ul>
+            {posts.length > 0 &&
+              posts.map((post) => (
+                <li key={post._id}>
+                  <Link to={post.slug.current}>{post.title}</Link>
+                </li>
+              ))}
+          </ul>
         </div>
       </article>
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    allSanityPost(sort: { fields: publishedAt, order: DESC }) {
+      nodes {
+        _id
+        title
+        slug {
+          current
+        }
+        excerpt
+        publishedAt(formatString: "MM/DD/YYYY")
+      }
+    }
+  }
+`;

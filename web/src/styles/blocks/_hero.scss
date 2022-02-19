@@ -1,3 +1,7 @@
+h1 {
+  line-height: 1.2;
+}
+
 @media (max-width: 900px) {
   .film {
     padding-left: 1ch;
@@ -20,6 +24,6 @@
   font-family: Brand;
   color: var(--black);
   -webkit-text-fill-color: var(--light);
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--black);
 }

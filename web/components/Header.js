@@ -22,40 +22,32 @@ export default function Header() {
       <nav>
         <ul className="flex | primary-navigation">
           <li>
-            <Link href="/" className={router.pathname == '/' ? 'active' : ''}>
-              <a>Home</a>
+            <Link href="/">
+              <a className={router.pathname == '/' ? 'active' : ''}>Home</a>
             </Link>
           </li>
           <li>
-            <Link
-              href="/bio"
-              className={router.pathname == '/bio' ? 'active' : ''}
-            >
-              <a>Bio</a>
+            <Link href="/bio">
+              <a className={router.pathname == '/bio' ? 'active' : ''}>Bio</a>
             </Link>
           </li>
           <li>
-            <Link
-              href="/work"
-              className={router.pathname == '/work' ? 'active' : ''}
-            >
-              <a>Work</a>
+            <Link href="/work">
+              <a className={router.pathname == '/work' ? 'active' : ''}>Work</a>
             </Link>
           </li>
           <li>
-            <Link
-              href="/writing"
-              className={router.pathname == '/writing' ? 'active' : ''}
-            >
-              <a>Writing</a>
+            <Link href="/writing">
+              <a className={router.pathname == '/writing' ? 'active' : ''}>
+                Writing
+              </a>
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
-              className={router.pathname == '/contact' ? 'active' : ''}
-            >
-              <a>Contact</a>
+            <Link href="/contact">
+              <a className={router.pathname == '/contact' ? 'active' : ''}>
+                Contact
+              </a>
             </Link>
           </li>
         </ul>

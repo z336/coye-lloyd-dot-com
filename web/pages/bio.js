@@ -1,10 +1,17 @@
-import * as React from 'react';
-import HelmetTemplate from '../components/SEO';
+import Head from 'next/head';
+// import Image from 'next/image';
 
 export default function Bio() {
   return (
     <>
-      <HelmetTemplate title="Bio" />
+      <Head>
+        <title>Bio | Coye Lloyd</title>
+        <meta
+          name="Coye Lloyd's personal website"
+          content="Coye Lloyd's portfolio and writing"
+        />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <article className="texture | padding-bottom">
         <div className="box | smooth | border-bottom">
           <h1>Bio</h1>

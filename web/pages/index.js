@@ -1,13 +1,27 @@
-import * as React from 'react';
-import HelmetTemplate from '../components/SEO';
+import Head from 'next/head';
+// import Image from 'next/image';
 
-export default function Work() {
+export default function Home() {
   return (
     <>
-      <HelmetTemplate title="Work" />
+      <Head>
+        <title>Coye Lloyd</title>
+        <meta
+          name="Coye Lloyd's personal website"
+          content="Coye Lloyd's portfolio and writing"
+        />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
       <article>
         <div className="box | border-bottom">
-          <h1>Work</h1>
+          <h1>
+            Para Academic <br />
+            <span className="film"> Film</span>
+            <br />
+            <span className="media">Media</span> <br />
+            <span className="ampersand">&amp;</span> Culture
+          </h1>
         </div>
         <div className="box | flow">
           <p>

@@ -15,7 +15,23 @@ export default {
     {
       name: 'image',
       title: 'Main Image',
-      type: 'mainImage',
+      type: 'image',
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alternative Text',
+          type: 'string',
+          validation: (Rule) =>
+            Rule.required().error(
+              `Add Alternative text for the visually impaired`
+            ),
+        },
+        {
+          name: 'caption',
+          title: 'Caption',
+          type: 'string',
+        },
+      ],
       options: { hotspot: true },
       description: 'The image we want to show on this page.',
     },

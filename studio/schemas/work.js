@@ -17,7 +17,9 @@ export default {
       name: 'featured',
       title: 'Is this the featured work?',
       type: 'boolean',
-      description: 'Only one work is marked as featured at a time.',
+      description:
+        'Only the featured article is marked true, mark this false for the rest.',
+      validation: (Rule) => Rule.required().error(`Mark this true or false.`),
     },
     {
       name: 'url',

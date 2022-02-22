@@ -1,48 +1,61 @@
 import Head from 'next/head';
-// import Image from 'next/image';
+import groq from 'groq';
+import client from '../lib/sanity/client';
+import PostBody from '../components/PostBody';
 
-export default function Work() {
+export default function Work({ data }) {
+  const featured = data.filter((work) => work.featured === true);
+  const featuredWork = featured[0];
+  const otherWork = data.filter((work) => work.featured === false);
+
   return (
     <>
       <Head>
         <title>Work | Coye Lloyd</title>
-        <meta
-          name="Coye Lloyd's personal website"
-          content="Coye Lloyd's portfolio and writing"
-        />
+        <meta name="theme-color" content="#fcebe1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <article className="texture | padding-bottom">
-        <div className="box | smooth | border-bottom">
+        <div className="box | title | smooth | border-bottom">
           <h1>Work</h1>
         </div>
-        <div className="grid | smooth | border-top | border-bottom | margin-top">
-          <article className="border-right">
-            <div className="box">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
-                deleniti eligendi magni, aspernatur fuga reiciendis aliquid sed
-                nobis. Deserunt assumenda natus ullam ea voluptas? Dolor veniam
-                porro perferendis ad enim.
-              </p>
-            </div>
-          </article>
-          <article>
-            <div className="box">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
-                voluptates natus pariatur deleniti beatae. Quo omnis quasi
-                beatae aspernatur minima, eligendi illo consectetur modi?
-                Temporibus ad accusantium repudiandae molestiae nemo. Lorem
-                ipsum, dolor sit amet consectetur adipisicing elit. Iste quidem,
-                aperiam at repellendus accusantium in esse quas consectetur
-                totam voluptatem, minima laborum unde facere a iure tempora
-                eaque assumenda? Odio.
-              </p>
-            </div>
-          </article>
-        </div>
+        <article>
+          <div className="box | measure | smooth | flow | border | margin-top | margin-bottom | margin-left | margin-right">
+            <h2>{featuredWork.title}</h2>
+            <PostBody content={featuredWork.description} />
+          </div>
+          <ul className="box | grid | gap | margin-left | margin-right">
+            {otherWork &&
+              otherWork.map((work) => (
+                <li
+                  key={work._id}
+                  className="box | measure | smooth | flow | border"
+                >
+                  <h2>{work.title}</h2>
+                  <PostBody content={work.description} />
+                </li>
+              ))}
+          </ul>
+        </article>
       </article>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const data = await client.fetch(groq`
+      *[_type == 'work'] | order(_createdAt desc){
+        _id,
+        title,
+        description,
+        url,
+        featured,
+      }
+    `);
+
+  return {
+    props: {
+      data: data || null,
+    },
+  };
 }

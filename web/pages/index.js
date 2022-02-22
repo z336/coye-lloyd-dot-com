@@ -6,15 +6,12 @@ export default function Home() {
     <>
       <Head>
         <title>Coye Lloyd</title>
-        <meta
-          name="Coye Lloyd's personal website"
-          content="Coye Lloyd's portfolio and writing"
-        />
+        <meta name="theme-color" content="#fcebe1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
       <article>
-        <div className="box | border-bottom">
+        <div className="box | title | border-bottom">
           <h1>
             Para Academic <br />
             <span className="film"> Film</span>

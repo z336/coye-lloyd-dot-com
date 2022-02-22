@@ -83,7 +83,24 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'mainImage',
+      type: 'image',
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alternative Text',
+          type: 'string',
+          validation: (Rule) =>
+            Rule.required().error(
+              `Add Alternative text for the visually impaired`
+            ),
+        },
+        {
+          name: 'caption',
+          title: 'Caption',
+          type: 'string',
+        },
+      ],
+      options: { hotspot: true },
     },
     {
       type: 'youtube',

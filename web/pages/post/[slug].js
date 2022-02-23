@@ -38,10 +38,11 @@ export default function Post({ post }) {
         </div>
         <article className="margin-left | margin-right | padding-top | padding-bottom">
           <div className="content | flow">
-            <p>
-              <em>Posted on {formatDate(publishedAt)}</em>
+            <p className="border-bottom">
+              <small>
+                <em>{formatDate(publishedAt)}</em>
+              </small>
             </p>
-            <hr />
             <PostBody content={body} />
           </div>
         </article>

@@ -17,7 +17,7 @@ export default function Home({ data }) {
         <div className="box | title | border-bottom">
           <h1>
             Para Academic <br />
-            <span className="film"> Film</span>
+            <span className="film">Film</span>
             <br />
             <span className="media">Media</span> <br />
             <span className="ampersand">&amp;</span> Culture

@@ -12,8 +12,8 @@ export default function Header() {
             <Image
               src="/images/coyelloyd.svg"
               alt="The Coye Lloyd logo"
-              height={26}
-              width={255}
+              height={31}
+              width={300}
               priority="true"
             />
           </a>

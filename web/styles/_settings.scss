@@ -3,10 +3,10 @@
   --red: #5b1a00;
   --light: #fcebe1;
   --measure: 60ch;
-  --vertical-space: 2rem;
-  --gutter: 2rem;
+  --vertical-space: 3rem;
+  --gutter: 5rem;
   @media (max-width: 768px) {
-    --gutter: 0.75rem;
+    --gutter: 1rem;
   }
   --step--3: 0.512rem;
   --step--2: 0.64rem;

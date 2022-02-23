@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import groq from 'groq';
 import client from '../lib/sanity/client';
 import formatDate from '../utils/helpers/formatDate';
@@ -16,14 +17,18 @@ export default function Writing({ posts }) {
           <h1>Writing</h1>
         </div>
         <article>
-          <ul className="box | margin-top | margin-left | margin-right">
+          <ul className="margin-top | margin-left | margin-right">
             {posts &&
               posts.map((post) => (
                 <li
                   key={post._id}
-                  className="box | measure | smooth | flow | margin-bottom | border"
+                  className="box | card | measure | smooth | flow | margin-bottom | border"
                 >
-                  <h2>{post.title}</h2>
+                  <Link href="/post/[slug]" as={`/post/${post.slug.current}`}>
+                    <a>
+                      <h2>{post.title}</h2>
+                    </a>
+                  </Link>
                   <small>{formatDate(post.publishedAt)}</small>
                   <p>{post.excerpt}</p>
                 </li>

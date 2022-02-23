@@ -18,10 +18,10 @@ export default function Bio({ data }) {
           <h1>{title}</h1>
         </div>
         <div className="grid | smooth | border-top | border-bottom | margin-top">
-          <article className="box | border-right">
+          <article className="box | card | border-right">
             <MainImage mainImage={image} alt={alt} caption={caption} />
           </article>
-          <article className="box">
+          <article className="box | card">
             <div className="content | flow">
               <PostBody content={body} />
             </div>

@@ -17,8 +17,10 @@ const BodyImage = ({ value }) => {
         layout="responsive"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-      <figcaption className="box">
-        <small>{value.caption}</small>
+      <figcaption>
+        <small>
+          <em>{value.caption}</em>
+        </small>
       </figcaption>
     </figure>
   );

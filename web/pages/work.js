@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import groq from 'groq';
 import client from '../lib/sanity/client';
 import PostBody from '../components/PostBody';
@@ -20,8 +21,12 @@ export default function Work({ data }) {
           <h1>Work</h1>
         </div>
         <article>
-          <div className="box | measure | smooth | flow | border | margin-top | margin-bottom | margin-left | margin-right">
-            <h2>{featuredWork.title}</h2>
+          <div className="box | card | measure | smooth | flow | border | margin-top | margin-bottom | margin-left | margin-right">
+            <Link href={featuredWork.url}>
+              <a>
+                <h2>{featuredWork.title}</h2>{' '}
+              </a>
+            </Link>
             <PostBody content={featuredWork.description} />
           </div>
           <ul className="box | grid | gap | margin-left | margin-right">
@@ -29,9 +34,13 @@ export default function Work({ data }) {
               otherWork.map((work) => (
                 <li
                   key={work._id}
-                  className="box | measure | smooth | flow | border"
+                  className="box | card | measure | smooth | flow | border"
                 >
-                  <h2>{work.title}</h2>
+                  <Link href={work.url}>
+                    <a>
+                      <h2>{work.title}</h2>
+                    </a>
+                  </Link>
                   <PostBody content={work.description} />
                 </li>
               ))}

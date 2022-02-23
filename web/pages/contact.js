@@ -22,7 +22,7 @@ export default function Contact({ data }) {
             <MainImage mainImage={image} alt={alt} caption={caption} />
           </article>
           <article className="box | card">
-            <div className="content | flow">
+            <div className="styled-list | content | flow">
               <PostBody content={body} />
             </div>
           </article>

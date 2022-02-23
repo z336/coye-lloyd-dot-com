@@ -41,6 +41,7 @@ export default function Post({ post }) {
             <p>
               <em>Posted on {formatDate(publishedAt)}</em>
             </p>
+            <hr />
             <PostBody content={body} />
           </div>
         </article>

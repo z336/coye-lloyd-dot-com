@@ -29,6 +29,7 @@ export default function Writing({ posts }) {
                       <h2>{post.title}</h2>
                     </a>
                   </Link>
+                  <br />
                   <small>{formatDate(post.publishedAt)}</small>
                   <p>{post.excerpt}</p>
                 </li>

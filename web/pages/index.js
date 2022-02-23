@@ -13,7 +13,6 @@ export default function Home({ data }) {
         <meta name="theme-color" content="#fcebe1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-
       <article>
         <div className="box | title | border-bottom">
           <h1>
@@ -29,7 +28,7 @@ export default function Home({ data }) {
             <MainImage mainImage={image} alt={alt} caption={caption} />
           </article>
           <article className="box | card">
-            <div className="content | flow">
+            <div className="styled-list | content | flow">
               <PostBody content={body} />
             </div>
           </article>

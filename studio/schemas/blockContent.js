@@ -60,9 +60,9 @@ export default {
             ],
           },
           {
+            title: 'Internal link',
             name: 'internalLink',
             type: 'object',
-            title: 'Internal link',
             fields: [
               {
                 name: 'reference',

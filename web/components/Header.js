@@ -8,11 +8,11 @@ export default function Header() {
     <header className="grid | navigation | border-bottom">
       <div className="brand | no-focus">
         <Link href="/" tabIndex={-1}>
-          <a aria-label="Coye lloyd" tabIndex={-1}>
+          <a aria-label="Coye lloyd">
             <Image
               src="/images/coyelloyd.svg"
               alt="The Coye Lloyd logo"
-              height={31}
+              height={28}
               width={300}
               priority="true"
             />

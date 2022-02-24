@@ -37,7 +37,7 @@ blockquote {
 }
 
 a {
-  color: currentColor;
+  color: var(--black);
   text-decoration: 2px solid underline;
 }
 
@@ -50,7 +50,7 @@ a {
 a:focus,
 button:focus {
   z-index: 10;
-  outline: 9px double currentColor;
+  outline: 9px double var(--black);
 }
 
 a:focus:not(:focus-visible),
@@ -59,8 +59,8 @@ button:focus:not(:focus-visible) {
 }
 
 blockquote {
-  border-left: 9px solid currentColor;
-  padding-left: var(--gutter);
+  border-left: 9px solid var(--black);
+  padding-left: 2rem;
   font-style: italic;
 }
 

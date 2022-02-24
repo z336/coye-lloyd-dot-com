@@ -24,7 +24,7 @@ export default function Home({ data }) {
           </h1>
         </div>
         <div className="grid">
-          <article className="box | card | border-right">
+          <article className="box | card | border-grid">
             <MainImage mainImage={image} alt={alt} caption={caption} />
           </article>
           <article className="box | card">

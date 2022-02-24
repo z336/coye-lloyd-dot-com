@@ -29,7 +29,7 @@ export default function Work({ data }) {
             </Link>
             <PostBody content={featuredWork.description} />
           </div>
-          <ul className="box | grid | gap | margin-left | margin-right">
+          <ul className="grid | gap | margin-left | margin-right">
             {otherWork &&
               otherWork.map((work) => (
                 <li

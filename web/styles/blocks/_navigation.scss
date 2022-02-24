@@ -2,8 +2,22 @@ header {
   svg {
     max-width: 12rem;
   }
-}
-
-.active {
-  text-underline-offset: 0.35rem;
+  nav {
+    a {
+      text-decoration: none;
+      background: linear-gradient(var(--black) 0 0) var(--p, 0) 100% /
+        var(--d, 0) 2px no-repeat;
+      transition: 0.1s, background-position 0s 0.1s;
+    }
+    @media (hover: hover) {
+      a:hover {
+        --d: 100%;
+        --p: 100%;
+      }
+    }
+    .active {
+      background: linear-gradient(var(--black) 0 0) 100% 100% / 100% 2px
+        no-repeat;
+    }
+  }
 }

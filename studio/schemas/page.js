@@ -11,6 +11,7 @@ export default {
       title: 'Title',
       type: 'string',
       description: 'Title of the page.',
+      readOnly: true,
     },
     {
       name: 'image',

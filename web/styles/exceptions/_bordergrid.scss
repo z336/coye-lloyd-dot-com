@@ -1,0 +1,11 @@
+@media (min-width: 999px) {
+  .border-grid {
+    border-right: 1px solid;
+  }
+}
+
+@media (max-width: 999px) {
+  .border-grid {
+    border-bottom: 1px solid;
+  }
+}

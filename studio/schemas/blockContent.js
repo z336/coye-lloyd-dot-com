@@ -43,7 +43,7 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'External link',
+            title: 'Link',
             name: 'link',
             type: 'object',
             fields: [
@@ -56,23 +56,6 @@ export default {
                   Rule.uri({
                     scheme: ['http', 'https', 'mailto'],
                   }),
-              },
-            ],
-          },
-          {
-            title: 'Internal link',
-            name: 'internalLink',
-            type: 'object',
-            fields: [
-              {
-                name: 'reference',
-                type: 'reference',
-                title: 'Reference',
-                to: [
-                  { type: 'post' },
-                  { type: 'page' },
-                  // other types you may want to link to
-                ],
               },
             ],
           },

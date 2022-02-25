@@ -18,7 +18,7 @@ export default function MainImage({ mainImage, alt, caption }) {
         sizes="(max-width: 800px) 100vw, 800px"
       />
       {caption && (
-        <figcaption className="photo-credit">
+        <figcaption className="photo-credit | icon">
           <small>
             <FaCamera /> {caption}
           </small>

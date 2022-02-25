@@ -1,5 +1,11 @@
 @media (min-width: 900px) {
   .box.title {
-    padding-left: 8rem;
+    padding-left: var(--gutter);
+  }
+}
+
+.box.title {
+  h1 {
+    line-height: 1.43;
   }
 }

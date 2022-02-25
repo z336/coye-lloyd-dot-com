@@ -21,7 +21,7 @@ export default function Work({ data }) {
           <h1>Work</h1>
         </div>
         <article>
-          <div className="box | card | measure | smooth | flow | border | margin-top | margin-bottom | margin-left | margin-right">
+          <div className="featured | smooth | flow | border-top | border-bottom | margin-top | margin-bottom | padding-top | padding-bottom | padding-left | padding-right">
             <Link href={featuredWork.url}>
               <a>
                 <h2>{featuredWork.title}</h2>{' '}
@@ -29,7 +29,7 @@ export default function Work({ data }) {
             </Link>
             <PostBody content={featuredWork.description} />
           </div>
-          <ul className="grid | gap | margin-left | margin-right">
+          <ul className="grid | gap | margin-bottom | margin-left | margin-right">
             {otherWork &&
               otherWork.map((work) => (
                 <li
@@ -38,7 +38,7 @@ export default function Work({ data }) {
                 >
                   <Link href={work.url}>
                     <a>
-                      <h2>{work.title}</h2>
+                      <h3>{work.title}</h3>
                     </a>
                   </Link>
                   <PostBody content={work.description} />

@@ -16,7 +16,7 @@ export default function Writing({ posts }) {
         <div className="box | title | smooth | border-bottom">
           <h1>Writing</h1>
         </div>
-        <article>
+        <article className="height">
           <ul className="margin-top | margin-left | margin-right">
             {posts &&
               posts.map((post) => (

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Head from 'next/head';
+import SEO from '../../components/SEO';
 import groq from 'groq';
 import client from '../../lib/sanity/client';
 import PostBody from '../../components/PostBody';
@@ -27,11 +27,7 @@ export default function Post({ post }) {
 
   return (
     <>
-      <Head>
-        <title>{title} | Coye Lloyd</title>
-        <meta name="theme-color" content="#fcebe1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+      <SEO title={title} />
       <article>
         <div className="box | title | smooth | border-bottom">
           <h1>{title}</h1>

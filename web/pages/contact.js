@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import SEO from '../components/SEO';
 import groq from 'groq';
 import client from '../lib/sanity/client';
 import MainImage from '../components/MainImage';
@@ -8,11 +8,7 @@ export default function Contact({ data }) {
   const { title, image, alt, caption, body = [] } = data;
   return (
     <>
-      <Head>
-        <title>{title} | Coye Lloyd</title>
-        <meta name="theme-color" content="#fcebe1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+      <SEO title={title} />
       <article className="texture | padding-bottom">
         <div className="box | title | smooth | border-bottom">
           <h1>{title}</h1>

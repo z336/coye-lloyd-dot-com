@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import SEO from '../components/SEO';
 import Link from 'next/link';
 import groq from 'groq';
 import client from '../lib/sanity/client';
@@ -7,11 +7,7 @@ import formatDate from '../utils/helpers/formatDate';
 export default function Writing({ posts }) {
   return (
     <>
-      <Head>
-        <title>Writing | Coye Lloyd</title>
-        <meta name="theme-color" content="#fcebe1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+      <SEO title="Writing" />
       <article className="texture | padding-bottom">
         <div className="box | title | smooth | border-bottom">
           <h1>Writing</h1>

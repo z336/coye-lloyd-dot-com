@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import SEO from '../components/SEO';
 import Link from 'next/link';
 import groq from 'groq';
 import client from '../lib/sanity/client';
@@ -11,11 +11,7 @@ export default function Work({ data }) {
 
   return (
     <>
-      <Head>
-        <title>Work | Coye Lloyd</title>
-        <meta name="theme-color" content="#fcebe1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
+      <SEO title="Work" />
       <article className="texture | padding-bottom">
         <div className="box | title | smooth | border-bottom">
           <h1>Work</h1>

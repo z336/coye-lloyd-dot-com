@@ -21,7 +21,7 @@ export default function Work({ data }) {
           <h1>Work</h1>
         </div>
         <article>
-          <div className="featured | smooth | flow | border-top | border-bottom | margin-top | margin-bottom | padding-top | padding-bottom | padding-left | padding-right">
+          <div className="featured | smooth | flow | margin-top | margin-bottom | border-top | border-bottom | padding-top | padding-bottom | padding-left | padding-right">
             <Link href={featuredWork.url}>
               <a>
                 <h2>{featuredWork.title}</h2>{' '}

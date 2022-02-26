@@ -17,7 +17,7 @@ export default function Bio({ data }) {
         <div className="box | title | smooth | border-bottom">
           <h1>{title}</h1>
         </div>
-        <div className="grid | smooth | border-top | border-bottom | margin-top">
+        <div className="grid | smooth | margin-top | border-top | border-bottom">
           <article className="box | card | border-grid">
             <MainImage mainImage={image} alt={alt} caption={caption} />
           </article>
